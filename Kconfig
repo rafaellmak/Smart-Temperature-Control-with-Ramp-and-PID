@@ -1,0 +1,13 @@
+menuconfig MY_DRIVER
+	bool "my_max6675_ramp"
+
+config my_driver
+    tristate "Nome do Meu Driver"
+    depends on GPIOS_GPIO
+    help
+        Este é o driver para o meu dispositivo.
+        Se você tem o hardware correspondente, diga Y ou M aqui.
+        Se estiver inseguro, escolha M.
+    default m if MY_DRIVER
+
+
